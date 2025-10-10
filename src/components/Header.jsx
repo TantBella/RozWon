@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logos/prel_logo.png";
 
 const Header = () => {
   return (
     <>
       <div id="header">
-        <div id="headerhome">
+        <div id="header-logo">
           <Link to="/">
-            RozWon- Logo here
+            <img src={logo} id="header-logo" alt="RozWon logo" />
           </Link>
         </div>
         <div class="navbar">
           <Link to="/"> Home</Link>
-          <Link to="/">About us</Link>
-          <Link to="/">Connect with us </Link>
+          <Link to="/aboutRozWon">About us</Link>
+          <Link to="/contactUs">Connect with us </Link>
         </div>
       </div>
     </>

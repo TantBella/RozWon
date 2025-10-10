@@ -7,17 +7,31 @@ body {
   padding: 0;
   min-height: 100%;
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  letter-spacing: 2px;
   background-color: rgb(246, 251, 255);
+  overflow-x: hidden;
 }
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a {
+  color: #10505e;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+/* --------------- */
 
 #header {
   padding-bottom: 2rem;
-
   text-align: center;
-}
-
-#header {
   width: 100%;
   display: flex;
   align-items: center;
@@ -25,36 +39,49 @@ body {
   padding: 1rem;
 }
 
-#headerhome {
+#header-logo {
+  height: 4rem;
+  width: auto;
+}
+
+#header-logo {
   border: none;
   box-shadow: none;
 }
 
+#header-logo > a:hover {
+  box-shadow: none;
+}
+
+/* --------------- */
+
 a {
-  background-color: rgb(246, 251, 255);
   text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  color: black;
+  font-size: 20px;
   margin: 1rem;
   text-align: center;
+  padding: 0.5rem;
 }
 
 a:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: #dc953e;
+  /* box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19); */
+  font-weight: 800;
 }
 
 img {
   width: 100%;
 }
 
+/* --------------- */
+
 #hero {
   background-image: url("../public/images/medical05.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
+  height: 75vh;
   justify-content: center;
   align-content: flex-end;
   padding: 2rem;
@@ -63,12 +90,15 @@ img {
 #hero-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
+  background-color: #fcfaf98e;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 #herolink > a,
 #hero-container > p {
-  font-size: 1.5rem;
+  font-size: 18px;
   background-color: #ffffff00;
   margin: 0;
 }
@@ -79,20 +109,30 @@ img {
   padding-top: 1rem;
 }
 
+/* --------------- */
+
 #main {
   padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 100;
   text-transform: none;
 }
 .line {
-  margin: 1rem 4rem;
+  margin: 2rem 6rem;
+  color: #497278;
 }
 
+/* .images {
+  display: flex;
+  justify-content: center;
+} */
+
 #image-container {
+  margin: 1rem auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
+  padding-top: 1rem;
+  max-width: 1200px;
 }
 
 .image-wrapper {
@@ -125,16 +165,52 @@ img {
   color: #000;
   font-size: 22px;
   padding: 2% 5%;
+  font-weight: 500;
 }
 
 .image-wrapper:hover .hov_text {
   opacity: 1;
 }
+/* ---------------- */
 
-#footer{
-  margin: 1rem;
-  font-size: 12px;
+#AboutUs,
+#ContactUs {
+  padding: 2rem;
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: none;
+}
+
+/* --------------- */
+#footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 14px;
   letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: 100; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: none;
+}
+#footer-links {
+  margin-bottom: 2rem;
+}
+
+#footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#copyright {
+  width: 100%;
+  padding-right: 1rem;
+  display: flex;
+  margin: 0.5rem 0 0 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#copyright > img {
+  height: 4rem;
+  width: 4rem;
 }

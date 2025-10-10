@@ -4,6 +4,8 @@ import "./App.css";
 import { Outlet } from "react-router-dom";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
+import AboutUs from "./Pages/AboutUsPage";
+import ContactPage from "./Pages/ContactPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -11,9 +13,9 @@ function Root() {
   return (
     <>
       <main>
-      <Header />
+        <Header />
         <Outlet />
-      <Footer />
+        <Footer />
       </main>
     </>
   );
@@ -27,6 +29,11 @@ function App() {
           element: <LandingPage />,
           path: "/",
         },
+        {
+          element: <AboutUs />,
+          path: "/aboutRozWon",
+        },
+        { element: <ContactPage />, path: "/contactUs" },
       ],
       element: <Root />,
     },
