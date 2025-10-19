@@ -25,12 +25,29 @@ li {
 
 h1 {
   text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
 }
 
+p,
 a {
+  line-height: 1.25;
+  font-size: 16px;
+}
+a {
+  text-transform: uppercase;
   color: black;
 }
 
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.line {
+  margin: 2rem 6rem;
+  color: #497278;
+}
 /* --------------- */
 
 #header {
@@ -59,9 +76,9 @@ a {
 
 /* --------------- */
 
-a {
+.navbar > a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   margin: 1rem;
   text-align: center;
   padding: 0.5rem;
@@ -74,41 +91,42 @@ a:hover {
   font-weight: 800;
 }
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 /* --------------- */
-
 #hero {
-  background-image: url("../public/images/medical05.jpg");
+  /* background-image: url("../public/images/medical05.jpg");
   background-size: contain;
   background-position: right;
-  background-repeat: no-repeat;
-  margin-right: 2rem;
+  background-repeat: no-repeat; */
+  /* margin-right: 2rem; */
+  margin: 0 auto;
   display: flex;
-  height: 75vh;
-  padding: 2rem;
+  align-items: center;
+  /* height: 70vh; */
+  /* padding: 2rem; */
   /* background-color: #fcfaf98e; */
 }
 
 #hero-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
 
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 20px;
 }
 
 #herolink > a,
 #hero-container > p {
-  background-color: #ffffff00;
+  /* background-color: #ffffff00; */
   margin: 1rem 0;
+  text-decoration: none;
 }
 
 .aboutus-button {
-  font-size: 18px;
   border: 2px solid #10505e;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -123,26 +141,92 @@ img {
   width: auto;
 }
 
-.hero-image {
-  width: 25%;
+#hero-image {
+  width: 40%;
   height: auto;
-  object-fit: cover;
-  object-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+#hero-image > img {
+  max-width: 100%;
+  /* border-radius: 250px; */
 }
 
 /* --------------- */
 
-#main {
+#landingpage-info {
   /* margin-top: 4rem; */
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   font-size: 20px;
   font-weight: 100;
   text-transform: none;
 }
-.line {
-  margin: 2rem 6rem;
-  color: #497278;
+
+#landingpage-pic {
+  width: 100%;
+  height: auto;
+  /* margin-bottom: 2rem; */
 }
+
+/* ------------------------ */
+/* #icon-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+} */
+
+#icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon-container img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.icon-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Texten som visas vid hover */
+.hover-text {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  font-size: 0.9rem;
+}
+
+/* När man hovrar visas texten */
+.icon-container:hover .hover-text {
+  opacity: 1;
+  bottom: -40px;
+}
+
+/* -------------- */
 
 /* .images {
   display: flex;
@@ -154,7 +238,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .image-wrapper {
@@ -163,7 +247,7 @@ img {
 }
 
 .image-wrapper img {
-  height: 100%;
+  max-height: 50vh;
   object-fit: cover;
   object-position: right;
   transition: 0.5s ease;

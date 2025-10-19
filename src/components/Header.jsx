@@ -11,7 +11,7 @@ const Header = () => {
             <img src={logo} id="header-logo" alt="RozWon logo" />
           </Link>
         </div>
-        <div class="navbar">
+        <div className="navbar">
           <Link to="/"> Home</Link>
           <Link to="/aboutRozWon">About us</Link>
           <Link to="/contactUs">Connect with us </Link>
