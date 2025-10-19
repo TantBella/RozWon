@@ -2,6 +2,7 @@ import React from "react";
 import MedicalPic1 from "../images/medicine-uniform-healthcare.jpg";
 import MedicalPic2 from "../images/medical07.png";
 import MedicalPic3 from "../images/medical01.jpg";
+import HeroPic from "../images/medical05.jpg";
 import Arrow from "../images/icons/arrow02.png";
 import { Link } from "react-router-dom";
 
@@ -26,14 +27,18 @@ const LandingPage = () => {
             your patients.
           </p>
           <div id="herolink">
-            <Link to="/">
+            <Link to="/aboutus" className="aboutus-button">
               Find out more <img id="arrow" alt="arrowbutton" src={Arrow} />
             </Link>
           </div>
         </div>
+        {/* <div id="hero-image">
+          <img alt="3 healthcare professionals" src={HeroPic} />
+        </div> */}
       </div>
 
       <div id="main">
+        {/* <hr className="line"></hr> */}
         <p>
           Rozwon Health advances public health through outreach, direct care,
           and strategic support for underserved and minority communities. We
