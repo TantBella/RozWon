@@ -1,41 +1,51 @@
 import React from "react";
-import MedicalPic1 from "../images/medicine-uniform-healthcare.jpg";
-import MedicalPic2 from "../images/medical07.png";
-import MedicalPic3 from "../images/medical01.jpg";
 import HeroPic from "../images/medical011.jpg";
 import LandingPagePic from "../images/medical02.jpg";
 import Arrow from "../images/icons/arrow02.png";
 import { Link } from "react-router-dom";
 import IconGrid from "../components/IconGrid";
+import "../styling/landingPage.css";
 
 const LandingPage = () => {
   return (
     <>
-      <div id="landingpage-info">
-        <img
-          alt="healthcare professionals"
-          id="landingpage-pic"
-          src={LandingPagePic}
-        />
-        <p>
-          Looking for qualified healthcare professionals in the Massachusetts
-          area? We provide experienced nurses, doctors, and medical staff for
-          hospitals, clinics, and healthcare facilities across Massachusetts.
-          Whether you need short-term coverage, locum tenens, or long-term
-          staffing solutions, our team ensures reliable, professional care for
-          your patients.
-        </p>
-        {/* <hr className="line"></hr> */}
-        <section id="hero">
+      <img
+        alt="healthcare professionals"
+        id="landingpage-pic"
+        src={LandingPagePic}
+      />
+      <div className="div-odd">
+
+        <div className="max-width inner-odd">
+          <h3 id="strong-p">
+            Looking for qualified healthcare professionals in the Massachusetts
+            area?
+          </h3>
+          <p style={{ marginTop: 0 }}>
+            Rozwon Health is a premier provider of healthcare and laboratory
+            support services, offering a comprehensive suite of solutions
+            designed to optimize healthcare operations and enhance patient
+            outcomes. Our expert team of clinical support consultants works
+            diligently to deliver tailored solutions for hospitals, health
+            systems, and healthcare facilities. Our focus is on improving
+            operational efficiency, implementing clinical best practices, and
+            ensuring the highest standards of care for both patients and staff.
+            We are dedicated to helping healthcare organizations achieve optimal
+            outcomes and elevate the quality of their services.
+          </p>
+          <p>
+            We provide experienced nurses, doctors, and medical staff for
+            hospitals, clinics, and healthcare facilities across Massachusetts.
+            Whether you need short-term coverage, locum tenens, or long-term
+            staffing solutions, our team ensures reliable, professional care for
+            your patients.
+          </p>
+        </div>
+      </div>
+      <section id="hero-section">
+        <span className="max-width" id="hero">
           <div id="hero-container">
             <h1>Medical Staffing Agency in Massachusetts </h1>
-            {/* <p>Nurses & Doctors on Demand / Hire Nurses & Doctors </p> */}
-            {/* <p> We provide highly
-            qualified nurses and doctors for hospitals and clinics in Boston and
-            Massachusetts. Flexible healthcare staffing solutions.
-          </p>
-           */}
-
             <p>
               Rozwon Health advances public health through outreach, direct
               care, and strategic support for underserved and minority
@@ -45,7 +55,7 @@ const LandingPage = () => {
               health outcomes and reduce barriers to care.
             </p>
             <div id="herolink">
-              <Link to="/aboutus" className="aboutus-button">
+              <Link to="/aboutRozWon" className="aboutus-button">
                 Find out more <img id="arrow" alt="arrowbutton" src={Arrow} />
               </Link>
             </div>
@@ -53,29 +63,15 @@ const LandingPage = () => {
           <div id="hero-image">
             <img alt="3 healthcare professionals" src={HeroPic} />
           </div>
-        </section>
-
-        <hr className="line"></hr>
-        {/* <div container="images"> */}
-        <IconGrid />
-
-        <hr className="line"></hr>
-        <div id="image-container">
-          <div className="image-wrapper">
-            <img alt="stetoscope" src={MedicalPic3} />
-            <div className="hov_text"> Community-first </div>
-          </div>
-          <div className="image-wrapper">
-            <img alt="stetoscope" src={MedicalPic1} />{" "}
-            <div className="hov_text"> Low-barrier access </div>
-          </div>
-          <div className="image-wrapper">
-            <img alt="stetoscope" src={MedicalPic2} />{" "}
-            <div className="hov_text"> Integrated care</div>
-          </div>
+        </span>
+      </section>
+      <span className="max-width">
+        {/* <hr className="line"></hr> */}
+        <div className="div-odd ">
+          <IconGrid />
         </div>
-        {/* </div> */}
-      </div>
+        {/* <hr className="line"></hr> */}
+      </span>
     </>
   );
 };

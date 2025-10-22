@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./App.css";
+
 import { Outlet } from "react-router-dom";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";

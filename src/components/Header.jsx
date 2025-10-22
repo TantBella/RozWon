@@ -1,4 +1,5 @@
 import React from "react";
+import "../styling/header.css";
 import { Link } from "react-router-dom";
 import logo from "../images/logos/prel_logo.png";
 
