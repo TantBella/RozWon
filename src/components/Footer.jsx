@@ -8,9 +8,11 @@ const Footer = () => {
     <>
       <div id="footer">
         <div id="footer-links" className=" footer-grid">
-          <Link>Contact Us</Link>
           <Link to="/privacypolicy">Privacy & Cookies</Link>
-          <Link>Contact Us</Link>
+          <Link to="/contactUs">Contact Us</Link>
+          <Link to="/digitalaccessibility">
+            Digital Accessibility Statement
+          </Link>
         </div>
         <div id="footer-text" className="footer-grid">
           <p>
@@ -27,7 +29,7 @@ const Footer = () => {
           <p>
             © TBTD <br></br>2025
           </p>
-          <img alt="webdev logo" src={TbtbLogo} />
+          <img style={{ padding: "1rem" }} alt="webdev logo" src={TbtbLogo} />
         </span>
       </div>
     </>
