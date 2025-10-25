@@ -9,6 +9,7 @@ import AboutUs from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PrivacyCookiePage from "./Pages/PrivacyCookiePage";
 
 function Root() {
   return (
@@ -37,6 +38,7 @@ function App() {
           path: "/aboutRozWon",
         },
         { element: <ContactPage />, path: "/contactUs" },
+        { element: <PrivacyCookiePage />, path: "/privacypolicy" },
       ],
       element: <Root />,
     },

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../styling/aboutUs.css";
 import ImageGrid from "../components/ImageGrid";
 import MedicalPic10 from "../images/medical010.jpg";
@@ -121,16 +121,16 @@ const AboutUsPage = () => {
         </ul>
       </div>
       <div className="div-odd">
-        <div className="max-width">
+        <div className="max-width" id="motto">
           {/* <hr className="line"></hr> */}
           <h1> Health, Community, Care</h1>
         </div>
       </div>
       <div className="max-width about-flex">
         {/* <hr className="line"></hr> */}
-        <span id="image-partners">
+        <div id="image-partners">
           <img alt="stetoscope" src={MedicalPic10} />
-        </span>
+        </div>
         <span>
           <h2>Our Partners</h2>
           <p>Trusted partners include:</p>
@@ -139,7 +139,6 @@ const AboutUsPage = () => {
             <li>AIDS Project Worcester</li>
             <li>Worcester Department of Public Health</li>
             <li>Mass Health</li>
-            {/* en bild bredvid listan */}
           </ul>
         </span>
       </div>

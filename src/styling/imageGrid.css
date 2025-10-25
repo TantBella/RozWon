@@ -12,7 +12,7 @@
 }
 
 .image-wrapper img {
-  max-height: 50vh;
+  max-height: 45vh;
   object-fit: cover;
   object-position: right;
   transition: 0.5s ease;
@@ -43,3 +43,21 @@
 .image-wrapper:hover .hov_text {
   opacity: 1;
 }
+
+
+/* @media screen and (max-width: 1199px) {
+  #image-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  .image-wrapper {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .image-wrapper img {
+    max-height: 30vh;
+  }
+} */

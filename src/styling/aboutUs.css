@@ -52,9 +52,24 @@
   /* padding: 1rem 0; */
 }
 
+#motto {
+  text-align: center;
+  height: 200px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#motto h1 {
+  letter-spacing: 3px;
+  font-size: 28px;
+}
+
 #image-partners img {
+  margin-right: 2rem;
+  max-width: 20vw;
+  max-height: auto;
   padding: 1rem;
-  max-width: 15vw;
   /* padding: 1rem; */
   border-radius: 75%;
 }

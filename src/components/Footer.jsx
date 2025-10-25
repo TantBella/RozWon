@@ -9,7 +9,7 @@ const Footer = () => {
       <div id="footer">
         <div id="footer-links" className=" footer-grid">
           <Link>Contact Us</Link>
-          <Link>Privacy & Cookies</Link>
+          <Link to="/privacypolicy">Privacy & Cookies</Link>
           <Link>Contact Us</Link>
         </div>
         <div id="footer-text" className="footer-grid">
