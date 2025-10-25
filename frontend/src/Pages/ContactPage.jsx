@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const API_URL = import.meta.env.VITE_API_URL || "";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +7,7 @@ const ContactPage = () => {
     email: "",
     message: "",
   });
+
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -16,6 +16,7 @@ const ContactPage = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    const API_URL = import.meta.env.VITE_API_URL || "";
     const response = await fetch(`${API_URL}/api/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -32,41 +33,48 @@ const ContactPage = () => {
 
   return (
     <>
-      <div id="ContactUs">
+      <div className="div-odd" id="ContactUs">
         <h3>Contact Us </h3>
         <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <br />
-          <label>
-            Your e-mail:
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <br />
-          <label>
-            Message:
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <br />
+          <div className="contact-form">
+            <label>
+              Name:
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+
+       
+
+          <div className="contact-form">
+            <label>
+              Your e-mail:
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+
+          <div className="contact-form">
+            <label>
+              Message:
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
           <button type="submit">Send message</button>
         </form>
       </div>
