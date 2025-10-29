@@ -1,49 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../styling/contactUs.css";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+
 import ReCaptchaBadge from "../components/ReCaptchaBadge";
 import EmailForm from "../components/EmailForm";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
-
 const ContactPage = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!executeRecaptcha) {
-      alert("reCAPTCHA not ready, please try again later.");
-      return;
-    }
-    const token = await executeRecaptcha("contact_form");
-
-    const response = await fetch(`${API_URL}/api/send-mail`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...formData, captchaResponse: token }),
-    });
-
-    if (response.ok) {
-      alert("Thank's for your message! We'll get back to you soon.");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Something went wrong. Please try again later.");
-    }
-  }
-
   return (
     <>
       <div className="div-odd">

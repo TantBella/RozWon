@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import ReCaptchaBadge from "../components/ReCaptchaBadge";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const EmailForm = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-
+  const [captchaValue, setCaptchaValue] = useState(null);
+  // const recaptchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,21 +20,27 @@ const EmailForm = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!executeRecaptcha) {
-      alert("reCAPTCHA not ready, please try again later.");
+    if (!captchaValue) {
+      alert("Please verify that you are not a robot.");
       return;
     }
-    const token = await executeRecaptcha("contact_form");
+    // const token = recaptchaRef.current.getValue();
 
-    const response = await fetch(`${API_URL}/api/send-mail`, {
+    const response = await fetch(API_URL, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...formData, captchaResponse: token }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({ ...formData, captchaResponse: captchaValue }),
     });
+    // const response = await fetch(`${API_URL}/api/send-mail`, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ ...formData, captchaResponse: captchaValue }),
+    // });
 
     if (response.ok) {
       alert("Thank's for your message! We'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
+      // recaptchaRef.current.reset();
     } else {
       alert("Something went wrong. Please try again later.");
     }
@@ -82,6 +87,14 @@ const EmailForm = () => {
             />
           </label>
         </div>
+        {/* <ReCAPTCHA
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+          ref={recaptchaRef}
+        /> */}
+        <ReCAPTCHA
+          sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+          onChange={(value) => setCaptchaValue(value)}
+        />
         <button type="submit" className="contactform-button">
           Send message
         </button>

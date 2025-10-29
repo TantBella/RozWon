@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4182cc1a.css",
+    "main.js": "/static/js/main.0a5153d3.js",
+    "static/js/453.56d723ab.chunk.js": "/static/js/453.56d723ab.chunk.js",
+    "static/media/medicine-uniform-healthcare.jpg": "/static/media/medicine-uniform-healthcare.099974fa96727f01c240.jpg",
+    "static/media/medical07.png": "/static/media/medical07.14989d05104238e4a00e.png",
+    "static/media/medical02.jpg": "/static/media/medical02.366bc0de531d2cc60175.jpg",
+    "static/media/medical01.jpg": "/static/media/medical01.52deaada322717438458.jpg",
+    "static/media/medical011.jpg": "/static/media/medical011.d15fd4beac7ec9ce80d4.jpg",
+    "static/media/medical010.jpg": "/static/media/medical010.06a180cde15e39d357a4.jpg",
+    "static/media/prel_logo.png": "/static/media/prel_logo.f3fe9bbab16cf8f90ef1.png",
+    "static/media/tbtd_logo.png": "/static/media/tbtd_logo.af0d2d7fee1f337b87c3.png",
+    "index.html": "/index.html",
+    "main.4182cc1a.css.map": "/static/css/main.4182cc1a.css.map",
+    "main.0a5153d3.js.map": "/static/js/main.0a5153d3.js.map",
+    "453.56d723ab.chunk.js.map": "/static/js/453.56d723ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4182cc1a.css",
+    "static/js/main.0a5153d3.js"
+  ]
+}

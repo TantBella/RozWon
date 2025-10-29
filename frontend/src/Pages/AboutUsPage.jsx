@@ -5,29 +5,6 @@ import ImageGrid from "../components/ImageGrid";
 import MedicalPic10 from "../images/medical010.jpg";
 
 const AboutUsPage = () => {
-  // const sections = [
-  //   {
-  //     title: "Who we are",
-  //     text: `Rozwon Health advances public health through outreach, direct care, and strategic support
-  //          for underserved and minority communities. Our services include disease prevention, behavioral health,
-  //          substance abuse support, and personalized care planning—to improve health outcomes and reduce barriers to care.`,
-  //   },
-  //   {
-  //     title: "What we do",
-  //     text: `We provide practical, accessible services both in the community and at private care locations.
-  //          Our programs include medication management, harm reduction, mental health and substance abuse support,
-  //          disease prevention, environmental health response, and assistance for non-communicable conditions.`,
-  //   },
-  //   {
-  //     title: "Our Mission Statement",
-  //     text: `Rozwon Health is committed to providing accessible, high-quality laboratory support personnel,
-  //          including phlebotomists, healthcare counselors, vaccinators, home health aids and visiting nurses.`,
-  //   },
-  //   {
-  //     title: "Our Vision",
-  //     text: `Rozwon Health aspires to become a respected, statewide leader known for pioneering solutions in healthcare.`,
-  //   },
-  // ];
 
   return (
     <>
@@ -35,13 +12,6 @@ const AboutUsPage = () => {
         <div className="div-odd">
           <ImageGrid />
         </div>
-        {/* <h1>About Us</h1>
-        <p>
-          Rozwon Consultants LLC is a minority-owned health services provider,
-          registered in Massachusetts on August 25, 2022. We focus on improving
-          health outcomes for marginalized and underserved populations.
-        </p> */}
-        {/* <hr className="line" /> */}
         <div className="max-width">
           <h2>Who we are</h2>
           <p>
@@ -88,16 +58,6 @@ const AboutUsPage = () => {
               their operations and improve performance.
             </p>{" "}
           </div>
-          {/* {sections.map((section, index) => (
-          <div
-            key={index}
-            className={`text-block ${index % 2 === 0 ? "even" : "odd"}`}
-          >
-            <h2 className="max-width">{section.title}</h2>
-            <p className="max-width">{section.text}</p>
-          </div>
-        ))} */}
-          {/* <hr className="line"></hr> */}
         </div>
         <div className="max-width"></div>
         <h2>Our Approach</h2>
@@ -122,7 +82,7 @@ const AboutUsPage = () => {
       </div>
       <div className="div-odd">
         <div className="max-width" id="motto">
-          {/* <hr className="line"></hr> */}
+
           <h1> Health, Community, Care</h1>
         </div>
       </div>

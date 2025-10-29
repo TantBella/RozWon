@@ -11,18 +11,6 @@
   text-align: center;
 }
 
-/* .line {
-  margin: 2rem 6rem;
-  color: #497278;
-} */
-
-.line {
-  border: none;
-  border-top: 2px solid #67b1bd;
-  width: 80%;
-  margin: 2rem auto;
-}
-
 .text-block {
   padding: 2rem;
   transition: background-color 0.3s ease;
@@ -54,9 +42,8 @@
 
 #motto {
   text-align: center;
-  height: 200px;
+  height: 100px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -70,6 +57,5 @@
   max-width: 20vw;
   max-height: auto;
   padding: 1rem;
-  /* padding: 1rem; */
   border-radius: 75%;
 }
