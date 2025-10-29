@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./App.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+    >
+      {console.log("Recaptcha key:", process.env.REACT_APP_RECAPTCHA_SITE_KEY)}
+      <App />
+    </GoogleReCaptchaProvider>
   </React.StrictMode>
 );
 

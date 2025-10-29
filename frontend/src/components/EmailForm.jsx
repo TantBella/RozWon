@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styling/contactUs.css";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import ReCaptchaBadge from "../components/ReCaptchaBadge";
-import EmailForm from "../components/EmailForm";
 
 const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
-const ContactPage = () => {
+const EmailForm = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const [formData, setFormData] = useState({
@@ -45,15 +42,52 @@ const ContactPage = () => {
   }
 
   return (
-    <>
-      <div className="div-odd">
-        <div className="max-width">
-          <EmailForm />
-          <ReCaptchaBadge />
+    <div id="ContactUs">
+      <h2>Contact Us </h2>
+      <form onSubmit={handleSubmit}>
+        <div className="contact-form">
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </label>
         </div>
-      </div>
-    </>
+
+        <div className="contact-form">
+          <label>
+            Your e-mail:
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+
+        <div className="contact-form">
+          <label>
+            Message:
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <button type="submit" className="contactform-button">
+          Send message
+        </button>
+      </form>
+    </div>
   );
 };
 
-export default ContactPage;
+export default EmailForm;
