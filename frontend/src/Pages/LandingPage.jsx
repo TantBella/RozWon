@@ -13,9 +13,9 @@ const LandingPage = () => {
         alt="healthcare professionals"
         id="landingpage-pic"
         src={LandingPagePic}
+        className="div-odd"
       />
       <div className="div-odd">
-
         <div className="max-width inner-odd">
           <h3 id="strong-p">
             Looking for qualified healthcare professionals in the Massachusetts

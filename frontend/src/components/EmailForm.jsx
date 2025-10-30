@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const EmailForm = () => {
   const [captchaValue, setCaptchaValue] = useState(null);
@@ -27,15 +27,20 @@ const EmailForm = () => {
     // const token = recaptchaRef.current.getValue();
 
     const response = await fetch(API_URL, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      //   body: new URLSearchParams({
+      //     name: formData.name,
+      //     email: formData.email,
+      //     message: formData.message,
+      //     recaptcha: captchaValue,
+      //   }),
+      // });
+      // const response = await fetch(`${API_URL}`, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ ...formData, captchaResponse: captchaValue }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...formData, captchaResponse: captchaValue }),
     });
-    // const response = await fetch(`${API_URL}/api/send-mail`, {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ ...formData, captchaResponse: captchaValue }),
-    // });
 
     if (response.ok) {
       alert("Thank's for your message! We'll get back to you soon.");
