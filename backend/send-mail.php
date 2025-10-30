@@ -1,15 +1,30 @@
 <?php
 header('Content-Type: application/json');
 
+header("Access-Control-Allow-Origin: http://rozwonhealth.com");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
+
+// Hämta JSON-data
+$input = json_decode(file_get_contents("php://input"), true);
+
+// --- Formulärdata ---
+$name = strip_tags($input['name'] ?? '');
+$email = filter_var($input['email'] ?? '', FILTER_SANITIZE_EMAIL);
+$message = strip_tags($input['message'] ?? '');
+$recaptcha = $input['captchaResponse'] ?? '';
+
+
 $config = include(__DIR__ . '/../config/secrets.php');
 $email_user = $config['email_user'];
 $recaptcha_secret = $config['recaptcha_secret'];
 
-// --- Formulärdata ---
-$name = strip_tags($_POST['name'] ?? '');
-$email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-$message = strip_tags($_POST['message'] ?? '');
-$recaptcha = $_POST['recaptcha'] ?? '';
 
 // --- Validering ---
 if (!$name || !$email || !$message || !$recaptcha) {
@@ -29,9 +44,10 @@ if (!$captcha_success->success) {
 // --- Skicka mejlet ---
 $to = $email_user;
 $subject = "New message from $name";
-$headers = "From: $email\r\n";
+$headers = "From: $email_user\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
 
 $body = "
 <h2>New Contact Form Submission</h2>
