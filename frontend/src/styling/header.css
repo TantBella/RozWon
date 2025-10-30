@@ -32,3 +32,40 @@
   padding: 0.5rem;
 }
 /* ----------------- */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar-link {
+    font-weight: 600;
+  }
+}
