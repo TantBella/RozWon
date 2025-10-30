@@ -5,7 +5,6 @@ import ImageGrid from "../components/ImageGrid";
 import MedicalPic10 from "../images/medical010.jpg";
 
 const AboutUsPage = () => {
-
   return (
     <>
       <div className=" about-us">
@@ -82,14 +81,16 @@ const AboutUsPage = () => {
       </div>
       <div className="div-odd">
         <div className="max-width" id="motto">
-
           <h1> Health, Community, Care</h1>
         </div>
       </div>
       <div className="max-width about-flex">
         {/* <hr className="line"></hr> */}
         <div id="image-partners">
-          <img alt="stetoscope" src={MedicalPic10} />
+          <img
+            alt="doctor and nurse walkning through hallway"
+            src={MedicalPic10}
+          />
         </div>
         <span>
           <h2>Our Partners</h2>

@@ -8,8 +8,8 @@ body {
   min-height: 100%;
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
-  /* background-color: rgb(242, 249, 255); */
-  background-color: #b5c6cd;
+  background-color: rgb(242, 249, 255);
+  /* background-color: #b5c6cd; */
   overflow-x: hidden;
 }
 
