@@ -9,7 +9,7 @@
 #icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 50px;
+  gap: 40px;
   justify-items: center;
   margin: 40px auto;
   max-width: 900px;
@@ -61,4 +61,46 @@
 .icon-container:hover .hover-desc {
   opacity: 1;
   bottom: -90px;
+}
+
+@media (max-width: 768px) {
+  #icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .icon-container img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon-title {
+    font-size: 0.85rem;
+  }
+
+  .hover-desc {
+    width: 180px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .icon-container img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-title {
+    font-size: 0.8rem;
+  }
+
+  .hover-desc {
+    width: 160px;
+    font-size: 0.75rem;
+  }
 }
