@@ -65,10 +65,8 @@ const CookieInfo = () => {
         </li>
         <li>
           <strong>Contact: </strong> If you have any questions or would like to
-          exercise your rights regarding cookies or personal data, please
-          contact us at: <p>📍 138 Pleasants St, Pembroke, MA 02359</p>
-          <p>📞 Call us at 857-237-8782 or</p>
-          <p>📩 Email us at info@rozwon.com</p>
+          exercise your rights regarding cookies or personal data, please email
+          us at info@rozwon.com
         </li>
       </ol>
     </div>

@@ -17,10 +17,10 @@ const LandingPage = () => {
       />
       <div className="div-odd">
         <div className="max-width inner-odd">
-          <h3 id="strong-p">
+          <h1 id="strong-p">
             Looking for qualified healthcare professionals in the Massachusetts
             area?
-          </h3>
+          </h1>
           <p style={{ marginTop: 0 }}>
             Rozwon Health is a premier provider of healthcare and laboratory
             support services, offering a comprehensive suite of solutions
@@ -45,7 +45,7 @@ const LandingPage = () => {
       <section id="hero-section">
         <span className="max-width" id="hero">
           <div id="hero-container">
-            <h1>Medical Staffing Agency in Massachusetts </h1>
+            <h2>Medical Staffing Agency in Massachusetts </h2>
             <p>
               Rozwon Health advances public health through outreach, direct
               care, and strategic support for underserved and minority
@@ -66,11 +66,9 @@ const LandingPage = () => {
         </span>
       </section>
       <span className="max-width">
-        {/* <hr className="line"></hr> */}
         <div className="div-odd ">
           <IconGrid />
         </div>
-        {/* <hr className="line"></hr> */}
       </span>
     </>
   );

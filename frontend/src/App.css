@@ -8,8 +8,8 @@ body {
   min-height: 100%;
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
-  background-color: rgb(242, 249, 255);
-  /* background-color: #b5c6cd; */
+  /* background-color: rgb(242, 249, 255); */
+  background-color: #b5c6cd;
   overflow-x: hidden;
 }
 
@@ -24,20 +24,19 @@ li {
 
 h1 {
   text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-h3 {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  /* margin: 1rem auto; */
+}
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 h4 {
   font-size: 18px;
@@ -100,6 +99,14 @@ a:hover {
   align-items: center;
   max-width: fit-content;
   background-color: #10505e00;
+  color: #10505e;
+}
+
+.aboutus-button:hover,
+.contactform-button:hover {
+  background-color: #10505e;
+  color: rgba(255, 255, 255, 0.438);
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1199px) {

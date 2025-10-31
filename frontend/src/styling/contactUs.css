@@ -1,5 +1,5 @@
 #ContactUs {
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 1rem;
   margin: 1rem auto;
   max-width: 600px;
   display: flex;
@@ -60,11 +60,7 @@ textarea:focus {
   align-self: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-.contactform-button:hover {
-  background-color: #10505e;
-  color: rgba(255, 255, 255, 0.438);
-  font-weight: 500;
+  color: #10505e;
 }
 
 .recaptcha-badge {
@@ -89,4 +85,11 @@ textarea:focus {
 
 .recaptcha-badge a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .recaptcha-badge {
+    position: static;
+    margin: 2rem;
+  }
 }

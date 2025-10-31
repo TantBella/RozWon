@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Tillåt React-router att hantera alla vägar
+RewriteEngine On
+RewriteBase /
+
+# Om filen eller katalogen finns, leverera den direkt
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Annars, skicka allt till index.html
+RewriteRule ^ index.html [L]

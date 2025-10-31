@@ -4,7 +4,7 @@ import "./App.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Outlet } from "react-router-dom";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import AboutUs from "./Pages/AboutUsPage";
 import ContactPage from "./Pages/ContactPage";
@@ -28,7 +28,7 @@ function Root() {
 }
 
 function App() {
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       children: [
         {

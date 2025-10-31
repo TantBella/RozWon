@@ -6,8 +6,8 @@
   align-items: center;
 }
 
-.about-us h2,
-.about-us h4 {
+.about-us h1,
+.about-us h2 {
   text-align: center;
 }
 
@@ -47,7 +47,8 @@
 
 #motto h1 {
   letter-spacing: 3px;
-  font-size: 28px;
+  font-size: 24px;
+  margin: 0;
 }
 
 #image-partners img {
@@ -64,11 +65,25 @@
   transform: scale(1.05);
 }
 
+.about-flex {
+  margin: 0 auto;
+}
+
 .about-flex span {
   max-width: 400px;
   text-align: left;
 }
-/* Små mobiler */
+
+.connect-email {
+  text-align: center;
+}
+
+#connect-email {
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 600px) {
   #image-partners img {
     max-width: 70%;
